@@ -1,0 +1,22 @@
+.restaurant-head {
+  font-size: 24px;
+}
+.restaurant-head strong {
+
+}
+
+.restaurant-nav {
+  margin: 10px 0;
+  text-align: center;
+}
+.restaurant-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.restaurant-nav li {
+  display: inline-block;
+  margin: 0 10px;
+  list-style-type: none;
+  text-decoration: underline;
+  cursor: pointer;
+}

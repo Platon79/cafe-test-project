@@ -1,0 +1,42 @@
+.review-form {
+  margin-top: 30px;
+}
+.review-form h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.review-form input[type="text"],
+.review-form input[type="number"],
+.review-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.review-form input[type="text"] {
+  height: 30px;
+}
+.review-form input[type="number"] {
+  height: 30px;
+}
+.review-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+.review-form input[type="submit"] {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  background: #f0ae51;
+  color: #fff;
+  cursor: pointer;
+}
+.review-form input[type="submit"]:focus {
+  outline: none;
+  background: #ff9500;
+}

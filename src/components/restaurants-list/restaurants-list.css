@@ -1,0 +1,12 @@
+.restaurants-list ul {
+  padding-left: 0;
+  text-align: center;
+}
+.restaurants-list li {
+  display: inline-block;
+  margin: 0 15px;
+  list-style-type: none;
+}
+.restaurants-list a {
+
+}

@@ -1,0 +1,26 @@
+.review-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+}
+.review-block:last-child {
+  margin-bottom: 0;
+}
+
+.review-left {
+  width: 100%;
+}
+
+.review-right {
+}
+
+.review-user {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.review-text {}

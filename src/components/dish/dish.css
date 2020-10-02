@@ -1,0 +1,36 @@
+.dish-block {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+.dish-block:last-child {
+  margin-bottom: 0;
+}
+
+.dish-left {
+  width: 100%;
+}
+
+.dish-right {
+}
+
+.dish-name {
+  margin-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.dish-ingredients {
+  margin-bottom: 5px;
+  color: #777;
+}
+
+.dish-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff9500;
+}
