@@ -30,6 +30,7 @@ const Order: React.FC<PropsFromRedux> = ({orderRestaurants, changeOrder}) => {
 	return (
 		<div className="cafe-order">
 			<div className="order-block">
+				<h3 className="order-title">Your order:</h3>
 				<div className="order-restaurants">
 					{restaurantsArr.map((restaurant) => (
 						<OrderRestaurant restaurant={restaurant} changeOrder={handleChangeOrder} key={restaurant.id} />
