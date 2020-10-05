@@ -13,6 +13,6 @@ export const restaurantsObj = (store: RootState): IRestaurantsObj => {
 	return obj;
 }
 
-export const selectRestaurant = (store: RootState, ownProps: any) => {
+export const selectRestaurant = (store: RootState, ownProps: any): IRestaurant => {
 	return restaurantsObj(store)[ownProps.restaurantId];
 }

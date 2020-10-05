@@ -1,7 +1,7 @@
 import React, {useState, MouseEvent} from 'react';
 import {connect, ConnectedProps} from 'react-redux';
-import {selectRestaurant} from '../../redux/selectors';
-import {RootState} from '../../redux/reducer';
+import {selectRestaurant} from 'redux/selectors';
+import {RootState} from 'redux/reducer';
 import Loader from '../loader';
 import Menu from '../menu';
 import Reviews from '../reviews';
@@ -31,10 +31,13 @@ const Restaurant: React.FC<PropsFromRedux & RestaurantProps> = ({restaurant}) =>
 		return <Loader />
 	}
 
+	const rating = restaurant.reviews.reduce((acc, val) => acc + val.rating, 0) / restaurant.reviews.length;
+	const flooredRating = Math.floor(rating * 100) / 100;
+
 	return (
 		<div className="restaurant-block">
 			<div className="restaurant-head">
-				<strong>{restaurant.name}</strong> (rating 4/5)
+				<strong>{restaurant.name}</strong> (rating {flooredRating}/5)
 			</div>
 			<nav className="restaurant-nav">
 				<ul>
@@ -44,7 +47,7 @@ const Restaurant: React.FC<PropsFromRedux & RestaurantProps> = ({restaurant}) =>
 			</nav>
 			<div className="restaurant-content">
 				{view === 'menu'
-					? <Menu dishes={restaurant.menu} />
+					? <Menu dishes={restaurant.menu} restaurant={restaurant} />
 					: <Reviews reviews={restaurant.reviews} restId={restaurant.id} />
 				}
 			</div>

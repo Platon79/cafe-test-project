@@ -1,3 +1,13 @@
+.cafe-content {
+  display: flex;
+}
+.cafe-main {
+  width: 100%;
+}
+.cafe-order {
+  width: 350px;
+}
+
 .container {
   width: 1200px;
   max-width: 90%;

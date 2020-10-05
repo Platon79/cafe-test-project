@@ -1,25 +1,28 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './counter.css';
 
 interface ICounterProps {
-	value?: number,
+	value: number,
+	setVal: Function,
 }
 
-const Counter: React.FC<ICounterProps> = () => {
-	const [counter, setCounter] = useState<number>(0);
+const Counter: React.FC<ICounterProps> = ({value, setVal}) => {
+	useEffect(() => {
+		setVal(value);
+	}, [value]);
 
 	const decrement = () => {
-		if (counter > 0)  setCounter((prev) => prev - 1);
+		if (value > 0)  setVal(value - 1);
 	};
 
 	const increment = () => {
-		setCounter((prev) => prev + 1);
+		setVal(value + 1);
 	};
 
 	return (
 		<div className="counter">
 			<button onClick={decrement}>-</button>
-			<span>{counter}</span>
+			<span>{value}</span>
 			<button onClick={increment}>+</button>
 		</div>
 	);

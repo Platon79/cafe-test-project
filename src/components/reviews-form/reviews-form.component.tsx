@@ -1,4 +1,4 @@
-import React, {FormEvent, MouseEvent, useState} from 'react';
+import React, {FormEvent, useState} from 'react';
 import {connect, ConnectedProps} from 'react-redux';
 import {addReview} from '../../redux/ac/restaurants.action';
 import { createId } from 'utils';
@@ -19,7 +19,7 @@ type PropsFromRedux = ConnectedProps<typeof connector>;
 const ReviewsForm: React.FC<PropsFromRedux & TProps> = ({addNewReview, restId}) => {
 	const [name, setName] = useState<string>('');
 	const [text, setText] = useState<string>('');
-	const [rating, setRating] = useState<string>('');
+	const [rating, setRating] = useState<string>('0');
 
 	const submitHandler = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -42,6 +42,7 @@ const ReviewsForm: React.FC<PropsFromRedux & TProps> = ({addNewReview, restId}) 
 				<input
 					type="text"
 					value={name}
+					required
 					placeholder="Enter your name"
 					onChange={(e: React.ChangeEvent<HTMLInputElement>) => setName(e.target.value)}
 				/>
@@ -53,6 +54,7 @@ const ReviewsForm: React.FC<PropsFromRedux & TProps> = ({addNewReview, restId}) 
 				</textarea>
 				<input
 					type="number"
+					max="5"
 					value={rating}
 					placeholder="Score"
 					onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRating(e.target.value)}
